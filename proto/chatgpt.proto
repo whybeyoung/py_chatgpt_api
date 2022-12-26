@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package pb;
+
+message InitSessionRequest {
+  string email = 1;
+  string password = 2;
+  bool isGoogleLogin = 3;
+  string proxyServer = 4;
+}
+message Message {
+  string conversationId = 1 ;
+  string messageId = 2;
+  string content = 3;
+}
+
+service ChatGptProxyServer {
+  rpc InitSession(InitSessionRequest) returns (Message);
+  rpc CreateConversation(Message) returns (Message);
+
+  rpc ServerStream(stream Message) returns (stream Message);
+  rpc SendMessage(Message) returns (Message);
+}

@@ -1,0 +1,39 @@
+{
+  "name": "hack_chatgpt",
+  "version": "1.0.0",
+  "description": "",
+  "source": "./server/index.ts",
+  "scripts": {
+    "build": "tsup",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "commonjs",
+  "main": "server/index.ts",
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.8.0",
+    "@types/google-protobuf": "^3.15.6",
+    "@zcong/ts-grpc-helper": "^0.4.0",
+    "chatgpt": "^3.3.3",
+    "devtools-protocol": "^0.0.1085790",
+    "grpc_tools_node_protoc_ts": "^5.3.2",
+    "grpc-tools": "^1.12.3",
+    "puppeteer": "*",
+    "ts-protoc-gen": "^0.15.0",
+    "tsup": "^6.5.0",
+    "tsx": "^3.12.1",
+    "typescript": "^4.9.4"
+  },
+  "peerDependencies": {
+    "puppeteer": "*"
+  },
+  "ava": {
+    "extensions": {
+      "ts": "module"
+    },
+    "nodeArguments": [
+      "--loader=tsx"
+    ]
+  }
+}

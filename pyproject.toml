@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "hack-chatgpt"
+version = "0.1.0"
+description = ""
+authors = ["ybyang <ybyang7@iflytek.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "hack_chatgpt"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jinja2 = ">=2.0"
+protobuf = ">=4.21"
+grpcio-health-checking = ">=1.50.0"
+grpcio = ">=1.50.0"
+grpcio-tools = ">=1.50.0"
+plumbum = ">=1.7.0"
+flask_restx = ">=1.0.0"
+jsonref = ">=1.0.0"
+pydantic = ">=1.8"
+[tool.poetry.dev-dependencies]
+jinja2 = ">=2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
