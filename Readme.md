@@ -29,6 +29,14 @@ Answer: 当一个人对另一个人有爱意时，他们可能会表现出许多
 Please write your questions... 
 ```
 ## usage
+* first run a chatgpt-api grpc server
+
+```bash
+npm install
+npx tsx server/index.ts  
+```
+
+* then using python
 
 ```python
 #!/usr/bin/env python
